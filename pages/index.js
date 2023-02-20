@@ -1,5 +1,5 @@
 import styles from '../styles/pages/Home.module.css';
-
+import withAuth from '../withAuth'
 import { useUserContext } from '../UserProvider';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -31,4 +31,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default withAuth(Home);

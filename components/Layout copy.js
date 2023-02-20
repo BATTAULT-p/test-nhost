@@ -1,5 +1,5 @@
 import styles from '../styles/components/Layout.module.css';
-import { useSignOut } from '@nhost/nextjs'
+
 import React, { Fragment } from 'react';
 import { useUserContext } from '../UserProvider';
 import Link from 'next/link';
@@ -15,8 +15,6 @@ import Avatar from './Avatar';
 
 const Layout = ({ children = null }) => {
   const { user } = useUserContext();
-  const { signOut } = useSignOut()
-
 
   const menuItems = [
     {
@@ -31,8 +29,8 @@ const Layout = ({ children = null }) => {
     },
     {
       label: 'Logout',
-      onClick: signOut,
-      icon: LogoutIcon
+      onClick: () => null,
+      icon: LogoutIcon,
     },
   ];
 
