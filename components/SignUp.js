@@ -36,6 +36,8 @@ const SignUp = () => {
     return null
   }
 
+ 
+
   const disableForm = isLoading || needsEmailVerification
 
   return (
